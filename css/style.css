@@ -1,0 +1,175 @@
+@import 'https://fonts.googleapis.com/css?family=Kreon:700|Open+Sans:400,700';
+
+/* 
+Reset
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* Définir 1rem = 10px */
+html{
+	font-size: 62.5%;
+}
+
+img{
+	width: 100%;
+}
+
+nav li{
+	display: none;
+}
+
+h1, h2, figcaption{
+	font-family: 'Kreon', serif;
+	line-height: 1em;
+}
+
+h1{
+	font-size: 1.5rem;
+}
+
+h1 span {
+	color: black;
+}
+
+h2{
+	margin-bottom: 1.5rem;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5rem;
+	text-align: center;
+	background-color: #eee;
+}
+
+
+
+/* 
+Home page
+*/
+h1 ~ a {
+    background-color: black;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    display: inline-block;
+}
+
+
+
+/* 
+Header/Footer
+*/
+
+header, footer {
+    background-color: #FF9800;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header .fa{
+    padding-left:2rem;
+}
+
+/* 
+Main
+*/
+
+main{
+	margin: 5rem auto;
+	padding: 1.5rem;
+}
+
+section:first-of-type {
+    background-color: rgba(255,255,255,.8);
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+
+    -webkit-transition: all .5s;
+    transition: all .5s;
+
+    -webkit-box-shadow: 0 0 .5rem rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 .5rem rgba(0,0,0,.2);
+    box-shadow: 0 0 .5rem rgba(0,0,0,.2);
+}
+
+section:first-of-type:hover{
+	-webkit-box-shadow: 0 0 1rem rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 1rem rgba(0,0,0,.5);
+    box-shadow: 0 0 1rem rgba(0,0,0,.5);
+}
+
+
+/* 
+Figure/FigCaption
+*/
+figure{
+	position: relative;
+	margin-bottom: 1.5rem;
+}
+
+figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0 0 1rem black;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* 
+Media Querie
+*/
+@media screen and (min-width:950px){
+
+	header {
+	    position: initial;
+	}
+
+	main, nav ul{
+		max-width: 95rem;
+	}
+
+	nav ul{
+		margin: auto;
+		text-align: left;
+		background-color: black;
+		padding: 1.5rem 0;
+	}
+
+	header .fa{
+		display: none;
+	}
+
+	nav li {
+	    display: inline-block;
+	    margin: 0 1.5rem;
+	}
+
+	h1 {
+		font-size: 5rem;
+		margin-top: 5rem;
+	}
+}
